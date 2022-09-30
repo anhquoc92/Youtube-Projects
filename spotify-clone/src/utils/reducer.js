@@ -29,19 +29,19 @@ const reducer = (state, action) => {
         userInfo: action.userInfo,
       };
     }
-    case reducerCases.SET_PLAYLIST:{
+    case reducerCases.SET_PLAYLIST: {
       return {
         ...state,
         selectedPlaylist: action.selectedPlaylist,
       };
     }
-    case reducerCases.SET_PLAYING:{
+    case reducerCases.SET_PLAYING: {
       return {
         ...state,
         currentlyPlaying: action.currentlyPlaying,
       };
     }
-    
+
     default:
       return state;
   }
