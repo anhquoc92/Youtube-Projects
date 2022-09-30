@@ -45,9 +45,9 @@ export default function Spotify() {
       <div className="spotify__body">
         <Sidebar />
         <div className="body" ref={bodyRef} onScroll={bodyScrolled}>
-          <Navbar navBackground={navBackground}/>
+          <Navbar navBackground={navBackground} />
           <div className="body__contents">
-            <Body  headerBackground={headerBackground}/>
+            <Body headerBackground={headerBackground} />
           </div>
         </div>
       </div>
@@ -74,6 +74,12 @@ const Container = styled.div`
       height: 100%;
       width: 100%;
       overflow: auto;
+      &::-webkit-scrollbar {
+        width: 1rem;
+        &-thumb {
+          background-color: rgba(255, 255, 255, 0.6);
+        }
+      }
     }
   }
 `;
