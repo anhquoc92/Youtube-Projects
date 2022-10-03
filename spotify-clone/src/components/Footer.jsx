@@ -1,11 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 import CurrtentTrack from "./CurrtentTrack";
+import PlayerControls from "./PlayerControls";
 
 export default function Footer() {
   return (
     <Container>
       <CurrtentTrack />
+      <PlayerControls />
     </Container>
   );
 }
