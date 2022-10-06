@@ -24,6 +24,7 @@ export default function PlayerControls() {
         },
       }
     );
+    dispatch ({type: reducerCases.SET_PLAYER_STATE, playerState:true})
     const response = await axios.get(
       "https://api.spotify.com/v1/me/player/currently-playing",
       {
@@ -42,7 +43,8 @@ export default function PlayerControls() {
         image: item.album.images[2].url,
       };
       dispatch({ type: reducerCases.SET_PLAYING, currentlyPlaying });
-    } else dispatch({ type: reducerCases.SET_PLAYING, currentlyPlaying: null });
+    } 
+    else dispatch({ type: reducerCases.SET_PLAYING, currentlyPlaying: null });
     console.log();
   };
   return (
